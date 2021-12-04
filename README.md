@@ -1,3 +1,3 @@
 # Machine Learning
 
-Some basic Machine Learning algorithm based on Python
+Some basic Machine Learning algorithm based on Python.
