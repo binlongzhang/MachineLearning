@@ -82,7 +82,7 @@ def file2matrix(filename):
 
 
 
-filename = 'data/KNN/datingTestSet.txt'
+filename = '../data/KNN/datingTestSet.txt'
 datingDatMat,datingLabels = file2matrix(filename)
 datingDatMat
 
@@ -123,7 +123,7 @@ minvals
 
 def datingClassTest():
     hoRatio = 0.1
-    datingDataMat,datingLabels = file2matrix('./data/KNN/datingTestSet.txt')
+    datingDataMat,datingLabels = file2matrix('../data/KNN/datingTestSet.txt')
     normMat, ranges, minVals = autoNorm(datingDatMat)
     m = normMat.shape[0]
     numTestVecs = int(m*hoRatio)
@@ -152,8 +152,64 @@ def classifyPerson(filename):
     print('You will probably like this person: ',resultList[classifierResult-1])
 
 
-filename = './data/KNN/datingTestSet.txt'
+filename = '../data/KNN/datingTestSet.txt'
 classifyPerson(filename)
 
 
+def img2vector(filename):
+    returnVect = zeros((1,1024))
+    fr = open(filename)
+    for i in range(32):
+        lineStr = fr.readline()
+        for j in range(32):
+            returnVect[0,32*i+j] = int(lineStr[j])
+    return returnVect        
 
+
+filename = '../data/KNN/TrainingDigits/0_13.txt'
+testVector = img2vector(filename)
+testVector[0,0:31]
+
+
+from os import listdir
+
+def handWritingClassTest(trainDir,testDir):
+    hwLabels = []
+    trainingFileList = listdir(trainDir)
+    m = len(trainingFileList)
+    trainingMat = zeros((m,1024))
+    # 提取训练数据
+    for i in range(m):
+        # 获取标签
+        fileNameStr = trainingFileList[i]
+        fileStr = fileNameStr.split('.')[0]
+        classNumStr = int(fileStr.split('_')[0])
+        hwLabels.append(classNumStr)
+        # 获取数据
+        trainingMat[i,:] = img2vector(trainDir + '/' + fileNameStr)
+
+    testFileList = listdir(testDir)
+    errorCount = 0
+    mTest = len(testFileList)
+    
+    for i in range(mTest):
+        # 获取标签
+        fileNameStr = testFileList[i]
+        fileStr = fileNameStr.split('.')[0]
+        classNumStr = int(fileStr.split('_')[0])
+        # 获取数据局
+        vectorUnderTest = img2vector(testDir + '/' + fileNameStr)
+        # 分类
+        classifierResult = classify0(vectorUnderTest,trainingMat,hwLabels,3)
+        # 统计
+        if (classifierResult get_ipython().getoutput("= classNumStr):")
+            errorCount +=1
+    # 打印结果
+    print('the total number of error is :get_ipython().run_line_magic("d'", " % errorCount)")
+    print('the total error rate is : get_ipython().run_line_magic("f'", " % (errorCount/float(mTest)))")
+
+
+
+trainDir = '../data/KNN/trainingDigits'
+testDir = '../data/KNN/testDigits'
+handWritingClassTest(trainDir,testDir)
