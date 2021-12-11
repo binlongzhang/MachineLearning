@@ -9,3 +9,7 @@ All experimental data are in the data folder.
 - Numpy Simple Test
 - KNN
 - Decision Tree
+
+- Naive Bayes
+
+  
