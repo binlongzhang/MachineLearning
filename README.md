@@ -13,17 +13,15 @@
 ## 主要内容
 
 - Numpy Test
-    
-    - 关于numpy array和matrix的简单示例
-    
+  
+    - 关于Numpy array和matrix的简单示例
 - Decision Tree
 
     - 决策树（ID3）
-    - matplotlib形象化决策树
+    - Matplotlib形象化决策树
     - 测试及存储分类器
     - e.g. 使用决策树预测隐形眼镜类型
     - 总结
-
 - Naive Bayes
 
     - 描述及特点
@@ -31,7 +29,6 @@
     - 使用NB过滤垃圾邮件
     - 使用NB获取不同类型信息的用词倾向
     - 总结
-
 - KNN
 
     - 描述及特点
@@ -41,15 +38,21 @@
         - e.g.1简单实例
         - e.g.2 KNN改进约会网站配对
         - e.g.3 KNN手写数字识别
-
 - Logistic Regression
 
   - 描述及特点
   - 理论基础
   - 基于最优化方法获取最佳回归系数
-  - 批次梯度上升
+    - 批次梯度上升
     - 随机梯度上升
   - e.g. 从疝气病症预测病马死亡率
   - 总结
-  
-  
+- SVM
+    - simpleSMO
+        - 理论基础
+        - SMO（Sequential Minimal Optimization）
+    - PlattSMO
+        - Platt SMO
+        - 应用核函数解决非线性可分问题
+        - 手写数字识别
+        - 总结
