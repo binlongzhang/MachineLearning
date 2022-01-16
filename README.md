@@ -13,24 +13,20 @@
 ## 主要内容
 
 - Numpy Test
-  
     - 关于Numpy array和matrix的简单示例
 - Decision Tree
-
     - 决策树（ID3）
     - Matplotlib形象化决策树
     - 测试及存储分类器
     - e.g. 使用决策树预测隐形眼镜类型
     - 总结
 - Naive Bayes
-
     - 描述及特点
     - 使用NB进行文本分类
     - 使用NB过滤垃圾邮件
     - 使用NB获取不同类型信息的用词倾向
     - 总结
 - KNN
-
     - 描述及特点
     - 核心原理
     - 算法流程
@@ -39,7 +35,6 @@
         - e.g.2 KNN改进约会网站配对
         - e.g.3 KNN手写数字识别
 - Logistic Regression
-
   - 描述及特点
   - 理论基础
   - 基于最优化方法获取最佳回归系数
@@ -60,3 +55,7 @@
     - 集成学习
     - AdaBoost
     - AdaBoost示例
+- LinearRegression
+    - 线性回归
+    - 局部加权线性回归
+    - 缩减系数辅助“理解”数据
