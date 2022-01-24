@@ -70,3 +70,8 @@
     - K-Mean clustering
     - Bisecting K-Mean算法
     - 示例:对地图上的点聚类
+- Apriori
+    - 关联分析
+    - Apriori
+    - 从频繁项集中挖掘关联规则
+    - e.g. 发现毒蘑菇的相似特征
